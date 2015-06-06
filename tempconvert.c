@@ -6,6 +6,10 @@ float celcius_to_fahrenheit(float result);
 
 int main(int argc, char *argv[]) {
 
+    // hold if conversion was successful
+    typedef enum { false, true } bool;
+    bool success = false;
+
     // make sure argument was passed
     if (argc == 2) {
 
@@ -36,24 +40,16 @@ int main(int argc, char *argv[]) {
                     resunit = 'F';
                 }
 
+                success = true;
+
                 // display result
                 printf("%g%c\n", result, resunit);
-
-            // display usage
-            } else {
-
-                display_usage();
             }
-
-        } else {
-
-            display_usage();
         }
-
-    } else {
-
-        display_usage();
     }
+
+    // display usage if no result
+    if (!success) display_usage();
 
    return 0;
 }
