@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 
 void display_usage(void);
 float fahrenheit_to_celcius(float result);
@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
         float degree;
         char unit;
 
+        // check for float and character
         if (sscanf(argv[1], "%f%c", &degree, &unit) == 2) {
 
             // convert unit to upper case
@@ -61,11 +62,11 @@ float celcius_to_fahrenheit(float degree) {
 
 float fahrenheit_to_celcius(float degree) {
 
-
     return (degree * 1.8f) + 32;
 }
 
 void display_usage(void) {
+
    printf("usage: [number][F, f, C, or c]\n");
    printf("example:  32.98F\n");
 }
