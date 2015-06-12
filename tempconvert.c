@@ -55,16 +55,25 @@ int main(int argc, char *argv[]) {
    return 0;
 }
 
+/**
+ * Convert Celsius to Fahrenheit 
+ */
 float celcius_to_fahrenheit(float degree) {
 
     return (degree - 32) * (5.0f / 9.0f);
 }
 
+/**
+ * Convert Fahrenheit to Celsius
+ */
 float fahrenheit_to_celcius(float degree) {
 
     return (degree * 1.8f) + 32;
 }
 
+/**
+ * Display information on how to use this program
+ */ 
 void display_usage(void) {
 
    printf("usage: [number][F, f, C, or c]\n");
