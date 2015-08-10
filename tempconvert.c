@@ -57,12 +57,12 @@ int main(int argc, char *argv[]) {
 
 float celcius_to_fahrenheit(float degree) {
 
-    return (degree - 32) * (5.0f / 9.0f);
+    return (degree * 1.8f) + 32;
 }
 
 float fahrenheit_to_celcius(float degree) {
-
-    return (degree * 1.8f) + 32;
+    
+    return (degree - 32) * (5.0f / 9.0f);
 }
 
 void display_usage(void) {
